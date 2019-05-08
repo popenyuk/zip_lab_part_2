@@ -1,0 +1,12 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" /mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2
+-- Found the following ICU libraries:
+--   uc (required)
+--   i18n (required)
+-- Boost version: 1.65.1
+-- Found the following Boost libraries:
+--   filesystem
+--   locale
+--   system
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/cmake-build-release
