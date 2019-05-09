@@ -11,17 +11,9 @@ vector
 -
 string
 -
-iostream
--
-archive.h
--
-archive_entry.h
--
 
 ../headers/configuration.h
 vector
--
-fstream
 -
 
 ../headers/directory_functions.h
@@ -29,8 +21,6 @@ vector
 -
 string
 -
-boost/filesystem.hpp
-../headers/boost/filesystem.hpp
 
 ../headers/my_queue.h
 mutex
@@ -41,74 +31,40 @@ condition_variable
 -
 
 ../headers/time_functions.h
-iostream
--
 atomic
--
-typeinfo
 -
 chrono
 -
-sstream
--
 
 ../headers/work_with_text_file.h
-map
--
-mutex
--
-thread
--
 string
--
-fstream
--
-sstream
--
-iomanip
--
-iostream
 -
 unordered_map
--
+../headers/unordered_map
 boost/locale.hpp
 -
-boost/locale/boundary/facets.hpp
--
-boost/locale/localization_backend.hpp
--
 
-/mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/headers/archive_functions.h
-vector
--
-string
--
+/mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/archive_functions.cpp
 iostream
 -
 archive.h
 -
 archive_entry.h
 -
-
-/mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/headers/configuration.h
-vector
--
-fstream
--
-
-/mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/archive_functions.cpp
-../headers/archive_functions.h
-/mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/headers/archive_functions.h
+archive_functions.h
+/mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/archive_functions.h
 
 /mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/configuration.cpp
-../headers/configuration.h
-/mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/headers/configuration.h
+fstream
+-
 iostream
 -
+configuration.h
+/mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/configuration.h
 
 /mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/directory_functions.cpp
-iostream
--
+boost/filesystem.hpp
+/mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/boost/filesystem.hpp
 directory_functions.h
 /mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/directory_functions.h
 
@@ -129,8 +85,22 @@ directory_functions.h
 /mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/directory_functions.h
 
 /mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/work_with_text_file.cpp
+thread
+-
+fstream
+-
+sstream
+-
+iomanip
+-
+iostream
+-
 work_with_text_file.h
 /mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/work_with_text_file.h
+boost/locale/boundary/facets.hpp
+-
+boost/locale/localization_backend.hpp
+-
 
 /usr/local/include/archive.h
 sys/stat.h

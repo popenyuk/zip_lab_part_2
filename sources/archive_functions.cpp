@@ -1,13 +1,15 @@
-//
-// Created by Yevhenii on 23/04/2019.
-//
-#include "../headers/archive_functions.h"
+// This is a personal academic project. Dear PVS-Studio, please check it.
+// PVS-Studio Static Code Analyzer for C, C++, C#, and Java: http://www.viva64.com
+#include <iostream>
+#include <archive.h>
+#include <archive_entry.h>
+#include "archive_functions.h"
 
 using std::string;
 using std::vector;
+using std::runtime_error;
 
-int copy_data(struct archive *ar, struct archive *aw)
-{
+int copy_data(struct archive *ar, struct archive *aw) {
     int r;
     const void *buff;
     size_t size;
@@ -27,8 +29,7 @@ int copy_data(struct archive *ar, struct archive *aw)
     }
 }
 
-void extract(const string& filename)
-{
+void extract(const string &filename) {
     struct archive *a;
     struct archive *ext;
     struct archive_entry *entry;
@@ -45,8 +46,8 @@ void extract(const string& filename)
     ext = archive_write_disk_new();
     archive_write_disk_set_options(ext, flags);
     archive_write_disk_set_standard_lookup(ext);
-    if ((r = archive_read_open_filename(a, filename.c_str(), 0)))
-        throw std::runtime_error("Archive has been corrupted");
+    if (archive_read_open_filename(a, filename.c_str(), 0))
+        throw runtime_error("Archive has been corrupted");
     for (;;) {
         r = archive_read_next_header(a, &entry);
         if (r == ARCHIVE_EOF)
@@ -54,7 +55,7 @@ void extract(const string& filename)
         if (r < ARCHIVE_OK)
             fprintf(stderr, "%s\n", archive_error_string(a));
         if (r < ARCHIVE_WARN)
-            throw std::runtime_error("Archive has been corrupted");
+            throw runtime_error("Archive has been corrupted");
         r = archive_write_header(ext, entry);
         if (r < ARCHIVE_OK)
             fprintf(stderr, "%s\n", archive_error_string(ext));
@@ -63,13 +64,13 @@ void extract(const string& filename)
             if (r < ARCHIVE_OK)
                 fprintf(stderr, "%s\n", archive_error_string(ext));
             if (r < ARCHIVE_WARN)
-                throw std::runtime_error("Archive has been corrupted");
+                throw runtime_error("Archive has been corrupted");
         }
         r = archive_write_finish_entry(ext);
         if (r < ARCHIVE_OK)
             fprintf(stderr, "%s\n", archive_error_string(ext));
         if (r < ARCHIVE_WARN)
-            throw std::runtime_error("Archive has been corrupted");
+            throw runtime_error("Archive has been corrupted");
     }
     archive_read_close(a);
     archive_read_free(a);
@@ -77,7 +78,7 @@ void extract(const string& filename)
     archive_write_free(ext);
 }
 
-vector<string> read_archive_entries(const string& path){
+vector<string> read_archive_entries(const string &path) {
     vector<string> entries;
     struct archive *a;
     struct archive_entry *entry;
@@ -88,14 +89,14 @@ vector<string> read_archive_entries(const string& path){
     archive_read_support_format_all(a);
     r = archive_read_open_filename(a, path.c_str(), 0); // Note 1
     if (r != ARCHIVE_OK)
-        throw std::runtime_error("Archive has been corrupted");
+        throw runtime_error("Archive has been corrupted");
     while (archive_read_next_header(a, &entry) == ARCHIVE_OK) {
         entries.emplace_back(archive_entry_pathname(entry));
         archive_read_data_skip(a);
     }
     r = archive_read_free(a);
     if (r != ARCHIVE_OK)
-        throw std::runtime_error("Archive has been corrupted");
+        throw runtime_error("Archive has been corrupted");
 
     return entries;
 }

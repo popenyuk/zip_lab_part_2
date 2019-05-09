@@ -19,8 +19,6 @@ CMakeFiles/_5_one_thread.dir/sources/one_thread_solution.cpp.o: ../headers/my_qu
 CMakeFiles/_5_one_thread.dir/sources/one_thread_solution.cpp.o: ../headers/time_functions.h
 CMakeFiles/_5_one_thread.dir/sources/one_thread_solution.cpp.o: ../headers/work_with_text_file.h
 CMakeFiles/_5_one_thread.dir/sources/one_thread_solution.cpp.o: ../sources/one_thread_solution.cpp
-CMakeFiles/_5_one_thread.dir/sources/one_thread_solution.cpp.o: /usr/local/include/archive.h
-CMakeFiles/_5_one_thread.dir/sources/one_thread_solution.cpp.o: /usr/local/include/archive_entry.h
 
 CMakeFiles/_5_one_thread.dir/sources/work_with_text_file.cpp.o: ../headers/work_with_text_file.h
 CMakeFiles/_5_one_thread.dir/sources/work_with_text_file.cpp.o: ../sources/work_with_text_file.cpp

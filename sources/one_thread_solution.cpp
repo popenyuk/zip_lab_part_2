@@ -1,3 +1,5 @@
+// This is a personal academic project. Dear PVS-Studio, please check it.
+// PVS-Studio Static Code Analyzer for C, C++, C#, and Java: http://www.viva64.com
 #include "my_queue.h"
 #include "configuration.h"
 #include "time_functions.h"
@@ -6,17 +8,28 @@
 #include "work_with_text_file.h"
 #include "directory_functions.h"
 
-int main(int argc, char *argv[]) {
-    boost::locale::generator gen;
-    std::locale loc = gen.generate("en_US.UTF-8");
-    std::locale::global(loc);
-    std::cout.imbue(loc);
+using std::cout;
+using std::endl;
+using std::cerr;
+using std::vector;
+using std::string;
+using std::locale;
+using std::transform;
+using std::unordered_map;
+using std::invalid_argument;
+using boost::locale::generator;
 
-    std::string conf_file;
+int main(int argc, char *argv[]) {
+    generator gen;
+    locale loc = gen.generate("en_US.UTF-8");
+    locale::global(loc);
+    cout.imbue(loc);
+
+    string conf_file;
     if (argc < 2) {
         conf_file = "../config.dat";
     } else if (argc > 2) {
-        std::cerr << "Wrong number of arguments. Usage: <config_filename>";
+        cerr << "Wrong number of arguments. Usage: <config_filename>";
         exit(-1);
     } else {
         conf_file = argv[1];
@@ -25,8 +38,8 @@ int main(int argc, char *argv[]) {
     config conf;
     try {
         conf = read_config(conf_file);
-    } catch (std::invalid_argument &e) {
-        std::cerr << "Invalid argument." << std::endl;
+    } catch (invalid_argument &e) {
+        cerr << "Invalid argument." << endl;
         exit(-3);
     }
 
@@ -34,27 +47,27 @@ int main(int argc, char *argv[]) {
 
 //--------------------------------   Reading file names
     auto extension = find_extension(conf.in_file);
-    std::vector<std::string> files;
-    std::transform(extension.begin(), extension.end(), extension.begin(), ::tolower);
+    vector<string> files;
+    transform(extension.begin(), extension.end(), extension.begin(), ::tolower);
     if (extension == "zip") {
         extract(conf.in_file);
         files = read_archive_entries(conf.in_file);
     } else if (extension[extension.size() - 1] == '/') {
         files = read_txt_files_from_directory(conf.in_file);
     } else {
-        std::cerr << "Wrong file extension." << std::endl;
+        cerr << "Wrong file extension." << endl;
         exit(-2);
     }
 //-------------------------------- Reading file in memory
-    std::string string_file;
-    std::vector<std::string> words;
+    string string_file;
+    vector<string> words;
     for (auto &in_file:files) {
         read_file_into_string(in_file, string_file);
         separate_by_words(string_file, words);
     }
 
 //--------------------------------   Counting words
-    std::unordered_map<std::string, size_t> words_map;
+    unordered_map<string, size_t> words_map;
     count_words(words, words_map);
 
 //--------------------------------   Sorting
@@ -69,6 +82,6 @@ int main(int argc, char *argv[]) {
 //--------------------------------
     auto time_all_total = finish_time - start_time;
 
-    std::cout << "Total: " << to_us(time_all_total) << std::endl;
+    cout << "Total: " << to_us(time_all_total) << endl;
     return 0;
 }

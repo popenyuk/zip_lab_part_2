@@ -1,11 +1,11 @@
 // This is a personal academic project. Dear PVS-Studio, please check it.
 // PVS-Studio Static Code Analyzer for C, C++, C#, and Java: http://www.viva64.com
-#include <iostream>
+#include "boost/filesystem.hpp"
 #include "directory_functions.h"
 
 using std::vector;
 using std::string;
-using namespace boost::filesystem;
+using boost::filesystem::recursive_directory_iterator;
 
 vector<string> read_txt_files_from_directory(const string &folder) {
     vector<string> files;

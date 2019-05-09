@@ -5,7 +5,6 @@
 
 #include <vector>
 #include <string>
-#include "boost/filesystem.hpp"
 
 std::vector<std::string> read_txt_files_from_directory(const std::string &folder);
 
