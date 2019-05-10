@@ -4,6 +4,7 @@
 #include "configuration.h"
 #include "time_functions.h"
 #include "archive_functions.h"
+#include "directory_functions.h"
 #include "work_with_text_file.h"
 
 
@@ -33,7 +34,6 @@ int main(int argc, char *argv[]) {
         conf_file = argv[1];
     }
 
-    string in_file;
     config conf;
     try {
         conf = read_config(conf_file);
@@ -44,22 +44,27 @@ int main(int argc, char *argv[]) {
 
     auto start_time = get_current_time_fenced();
 //--------------------------------   Reading file in memory
+    vector<string> files;
     auto extension = find_extension(conf.in_file);
     transform(extension.begin(), extension.end(), extension.begin(), ::tolower);
     if (extension == "zip") {
         extract(conf.in_file);
-        read_file_into_string(read_archive_entries(conf.in_file)[0], in_file);
-    } else if (extension == "txt") {
-        read_file_into_string(conf.in_file, in_file);
+        files = read_archive_entries(conf.in_file);
+    } else if (extension[extension.size() - 1] == '/') {
+        files = read_txt_files_from_directory(conf.in_file);
     } else {
         cerr << "Wrong file extension." << endl;
         exit(-2);
     }
-    vector<string> words;
-    separate_by_words(in_file, words);
 //--------------------------------   Counting words
+    string string_file;
+    vector<string> words;
     unordered_map<string, size_t> words_map;
-    run_multi_thread(conf.indexing_threads + conf.merging_threads, words, words_map);
+    for (auto &in_file:files) {
+        read_file_into_string(in_file, string_file);
+        separate_by_words(string_file, words);
+        run_multi_thread(conf.indexing_threads + conf.merging_threads, words, words_map);
+    }
 //--------------------------------   Sorting
     auto by_numbers = sort_words(words_map);
     auto by_words = sort_words(words_map, false);
