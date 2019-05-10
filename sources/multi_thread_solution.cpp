@@ -1,6 +1,7 @@
 // This is a personal academic project. Dear PVS-Studio, please check it.
 // PVS-Studio Static Code Analyzer for C, C++, C#, and Java: http://www.viva64.com
 #include <algorithm>
+#include "dispatcher.h"
 #include "configuration.h"
 #include "time_functions.h"
 #include "archive_functions.h"
@@ -57,17 +58,11 @@ int main(int argc, char *argv[]) {
         exit(-2);
     }
 //--------------------------------   Counting words
-    string string_file;
-    vector<string> words;
-    unordered_map<string, size_t> words_map;
-    for (auto &in_file:files) {
-        read_file_into_string(in_file, string_file);
-        separate_by_words(string_file, words);
-        run_multi_thread(conf.indexing_threads + conf.merging_threads, words, words_map);
-    }
+    dispatcher processing(conf, files);
+    processing.run();
 //--------------------------------   Sorting
-    auto by_numbers = sort_words(words_map);
-    auto by_words = sort_words(words_map, false);
+    auto by_numbers = sort_words(processing.get_result());
+    auto by_words = sort_words(processing.get_result(), false);
 //--------------------------------
     auto finish_time = get_current_time_fenced();
 //--------------------------------   Writing to the file

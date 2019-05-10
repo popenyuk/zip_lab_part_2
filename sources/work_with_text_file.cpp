@@ -59,60 +59,6 @@ void count_words(vector<string> &words_vector, unordered_map<string, size_t> &wo
         words[fold_case(normalize(w, norm_nfd))]++;
 }
 
-unordered_map<string, size_t> merge_results(vector<unordered_map<string, size_t >> &r) {
-    unordered_map<string, size_t> final;
-    for (auto &i: r) {
-        for (auto &j: i) {
-            final[j.first] += j.second;
-        }
-    }
-    return final;
-}
-
-void count_words_multi_thread(vector<string> &words_vector, vector<unordered_map<string, size_t>> &results, int start,
-                              int end, int id) {
-    unordered_map<string, size_t> counted;
-    for (auto i = start; i < end; i++)
-        counted[fold_case(normalize(words_vector[i], norm_nfd))]++;
-    results[id] = counted;
-}
-
-void run_multi_thread(int threads_num, vector<string> &words_vector, unordered_map<string, size_t> &words_map) {
-    vector<unordered_map<string, size_t>> results;
-    vector<thread> threads;
-    threads.reserve(static_cast<unsigned long>(threads_num));
-
-    if (threads_num > words_vector.size() || threads_num < 1)
-        threads_num = static_cast<int>(words_vector.size());
-
-    size_t value_per_thread = words_vector.size() / threads_num;
-    size_t start_value = 0;
-    size_t end_value = start_value + value_per_thread;
-
-    for (int i = 0; i < threads_num; ++i)
-        results.emplace_back();
-
-    for (int i = 0; i < threads_num; i++) {
-        try {
-            threads.emplace_back(count_words_multi_thread, ref(words_vector), ref(results), start_value, end_value, i);
-        } catch (exception &ex) {
-            cout << "Error: " << ex.what() << endl;
-            throw;
-        }
-
-        start_value += value_per_thread;
-        end_value += value_per_thread;
-
-        if (i == threads_num - 2)
-            end_value = words_vector.size();
-    }
-    for (int i = 0; i < threads_num; ++i) {
-        threads[i].join();
-    }
-    threads.clear();
-    words_map = merge_results(results);
-}
-
 bool number_compare(pair<string, size_t> &a, pair<string, size_t> &b) {
     return a.second < b.second;
 }
@@ -126,4 +72,40 @@ vector<pair<string, size_t>> sort_words(unordered_map<string, size_t> &words, bo
     sort_by_number ? sort(elements.begin(), elements.end(), number_compare) :
     sort(elements.begin(), elements.end(), words_compare);
     return elements;
+}
+
+void process(dispatcher *current, const string &inputed_data) {
+    vector<string> words;
+    unordered_map<string, size_t> words_map;
+    separate_by_words(inputed_data, words);
+    count_words(words, words_map);
+    (*current).push_result(words_map);
+}
+
+void process_the_file(dispatcher *current) {
+    string new_data;
+    while ((*current).get_status_of_processing_data()) {
+        if ((*current).will_be_next_data()) {
+            (*current).wait_signal();
+        }
+        if ((*current).try_pop(new_data)) {
+            process(current, new_data);
+        }
+    }
+}
+
+void process_result(dispatcher *current) {
+    unordered_map<string, size_t> words_map_1;
+    unordered_map<string, size_t> words_map_2;
+    while ((*current).get_status_of_processing_result()) {
+        if ((*current).will_be_next_result()) {
+            (*current).wait_signal_result();
+        }
+        if ((*current).try_pop_result(words_map_1, words_map_2)) {
+            for (auto &word:words_map_2) {
+                words_map_1[word.first] += word.second;
+            }
+            (*current).push_result(words_map_1);
+        }
+    }
 }

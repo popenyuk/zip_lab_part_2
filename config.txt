@@ -1,5 +1,5 @@
-infile="./example/"
+infile="./example/data.zip"
 out_by_a="result_by_name.txt"
 out_by_n="result_by_number.txt"
-indexing_threads=2
+indexing_threads=4
 merging_threads=2

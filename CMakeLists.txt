@@ -32,7 +32,8 @@ ADD_EXECUTABLE(_5_one_thread sources/one_thread_solution.cpp
         headers/configuration.h
         sources/work_with_text_file.cpp
         headers/work_with_text_file.h
-        headers/time_functions.h sources/directory_functions.cpp headers/directory_functions.h)
+        headers/time_functions.h sources/directory_functions.cpp headers/directory_functions.h
+        headers/dispatcher.h sources/dispatcher.cpp)
 
 ADD_EXECUTABLE(_5_multi_thread sources/multi_thread_solution.cpp
         sources/archive_functions.cpp
@@ -40,7 +41,8 @@ ADD_EXECUTABLE(_5_multi_thread sources/multi_thread_solution.cpp
         headers/configuration.h
         sources/work_with_text_file.cpp
         headers/work_with_text_file.h
-        headers/time_functions.h headers/my_queue.h sources/directory_functions.cpp headers/directory_functions.h)
+        headers/time_functions.h headers/dispatcher.h sources/directory_functions.cpp
+        headers/directory_functions.h sources/dispatcher.cpp)
 
 IF (UNIX)
     TARGET_LINK_LIBRARIES(_5_one_thread libarchive.so ${Boost_LIBRARIES} ${ICU_LIBRARIES} Threads::Threads)

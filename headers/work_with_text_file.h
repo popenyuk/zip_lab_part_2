@@ -4,6 +4,7 @@
 #define INC_5_WORK_WITH_FILE_H
 
 #include <string>
+#include "dispatcher.h"
 #include "unordered_map"
 #include <boost/locale.hpp>
 
@@ -20,8 +21,10 @@ std::vector<std::pair<std::string, size_t>> sort_words(std::unordered_map<std::s
 
 void write_to_file(const std::string &filename, const std::vector<std::pair<std::string, size_t>> &words);
 
-void run_multi_thread(int threads_num, std::vector<std::string> &words_vector,
-                      std::unordered_map<std::string, size_t> &words_map);
+void process(dispatcher *current, const std::string &data);
 
+void process_the_file(dispatcher *current);
+
+void process_result(dispatcher *current);
 
 #endif //INC_5_WORK_WITH_FILE_H
