@@ -23,6 +23,7 @@ config read_config(const string &filename) {
     }
     infile >> s;
     s1 = s.substr(s.find('=') + 1, s.find('\\'));
+    infile >> s;
     s2 = s.substr(s.find('=') + 1, s.find('\\'));
 
     conf.in_file = conf_vector[0];

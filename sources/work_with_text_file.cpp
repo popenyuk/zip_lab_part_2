@@ -59,11 +59,11 @@ void count_words(vector<string> &words_vector, unordered_map<string, size_t> &wo
         words[fold_case(normalize(w, norm_nfd))]++;
 }
 
-bool number_compare(pair<string, size_t> &a, pair<string, size_t> &b) {
+const bool number_compare(pair<string, size_t> &a, pair<string, size_t> &b) {
     return a.second < b.second;
 }
 
-bool words_compare(pair<string, size_t> &a, pair<string, size_t> &b) {
+const bool words_compare(pair<string, size_t> &a, pair<string, size_t> &b) {
     return a.first < b.first;
 }
 

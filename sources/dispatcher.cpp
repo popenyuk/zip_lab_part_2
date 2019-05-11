@@ -11,6 +11,13 @@ using std::thread;
 using std::lock_guard;
 using std::unique_lock;
 
+dispatcher::dispatcher(const config &conf, const vector<string> &input) : conf_file(conf), input_data(input) {
+    lock_guard<mutex> lock(mtx);
+    lock_guard<mutex> lck(mtx_for_result);
+    indexing_threads.reserve(conf.indexing_threads);
+    merging_threads.reserve(conf.merging_threads);
+}
+
 size_t dispatcher::get_size() {
     return process_data.size();
 }
@@ -26,7 +33,7 @@ void dispatcher::push_data(const string &element) {
 }
 
 void dispatcher::push_result(const unordered_map<string, size_t> &result) {
-    lock_guard<mutex> lock(mtx);
+    lock_guard<mutex> lock(mtx_for_result);
     result_queue.push(result);
     cv_for_result.notify_one();
 }
@@ -42,7 +49,7 @@ bool dispatcher::try_pop(string &value) {
 }
 
 bool dispatcher::try_pop_result(unordered_map<string, size_t> &value1, unordered_map<string, size_t> &value2) {
-    unique_lock<mutex> lock(mtx);
+    unique_lock<mutex> lock(mtx_for_result);
     if (get_result_size() >= 2) {
         value1 = result_queue.front();
         result_queue.pop();
@@ -59,20 +66,12 @@ void dispatcher::wait_signal() {
 }
 
 void dispatcher::wait_signal_result() {
-    unique_lock<mutex> lock(mtx);
+    unique_lock<mutex> lock(mtx_for_result);
     cv_for_result.wait(lock);
-}
-
-dispatcher::dispatcher(const config &conf, const vector<string> &input) {
-    conf_file = conf;
-    input_data = input;
-    indexing_threads.reserve(conf.indexing_threads);
-    merging_threads.reserve(conf.merging_threads);
 }
 
 void dispatcher::run() {
     string string_file;
-    vector<string> words;
     for (int num = 0; num < conf_file.indexing_threads; ++num) {
         indexing_threads.emplace_back(process_the_file, this);
     }
@@ -96,6 +95,7 @@ void dispatcher::run() {
 }
 
 unordered_map<std::string, size_t> &dispatcher::get_result() {
+    lock_guard<mutex> lock(mtx_for_result);
     return result_queue.front();
 }
 

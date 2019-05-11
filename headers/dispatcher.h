@@ -16,6 +16,7 @@ using std::unordered_map;
 class dispatcher {
     std::mutex mtx;
     config conf_file;
+    std::mutex mtx_for_result;
     std::condition_variable cv;
     bool will_new_data_be = true;
     bool will_new_result_be = true;
