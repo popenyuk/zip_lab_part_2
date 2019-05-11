@@ -51,6 +51,8 @@ int main(int argc, char *argv[]) {
     if (extension == "zip") {
         extract(conf.in_file);
         files = read_archive_entries(conf.in_file);
+    } else if (extension == "txt") {
+        files.push_back(conf.in_file);
     } else if (extension[extension.size() - 1] == '/') {
         files = read_txt_files_from_directory(conf.in_file);
     } else {

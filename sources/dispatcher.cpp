@@ -19,10 +19,12 @@ dispatcher::dispatcher(const config &conf, const vector<string> &input) : conf_f
 }
 
 size_t dispatcher::get_size() {
+    lock_guard<mutex> lock(mtx);
     return process_data.size();
 }
 
 size_t dispatcher::get_result_size() {
+    lock_guard<mutex> lock(mtx_for_result);
     return result_queue.size();
 }
 
@@ -35,12 +37,14 @@ void dispatcher::push_data(const string &element) {
 void dispatcher::push_result(const unordered_map<string, size_t> &result) {
     lock_guard<mutex> lock(mtx_for_result);
     result_queue.push(result);
-    cv_for_result.notify_one();
+    if (result_queue.size() >= 2) {
+        cv_for_result.notify_one();
+    }
 }
 
 bool dispatcher::try_pop(string &value) {
-    unique_lock<mutex> lock(mtx);
     if (get_size()) {
+        lock_guard<mutex> lock(mtx);
         value = process_data.front();
         process_data.pop();
         return true;
@@ -49,8 +53,8 @@ bool dispatcher::try_pop(string &value) {
 }
 
 bool dispatcher::try_pop_result(unordered_map<string, size_t> &value1, unordered_map<string, size_t> &value2) {
-    unique_lock<mutex> lock(mtx_for_result);
     if (get_result_size() >= 2) {
+        lock_guard<mutex> lock(mtx_for_result);
         value1 = result_queue.front();
         result_queue.pop();
         value2 = result_queue.front();
