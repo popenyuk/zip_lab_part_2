@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated>
-      <config projectName="_5" targetName="_5_multi_thread" />
-      <config projectName="_5" targetName="_5_one_thread" />
-    </generated>
+    <generated />
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
@@ -15,67 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcb3f2bf-1bd3-4493-89dc-e3f7c100c45d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/headers/some_functions_for_one_thread_solution.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/some_functions_for_one_thread_solution.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/.idea/bin.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/_5_multi_thread" beforeDir="false" afterPath="$PROJECT_DIR$/bin/_5_multi_thread" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/_5_multi_thread.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/_5_multi_thread.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/_5_one_thread" beforeDir="false" afterPath="$PROJECT_DIR$/bin/_5_one_thread" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/_5_one_thread.exe" beforeDir="false" afterPath="$PROJECT_DIR$/bin/_5_one_thread.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/CMakeError.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/sources/archive_functions.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/sources/archive_functions.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/sources/configuration.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/sources/configuration.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/sources/multi_thread_solution.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/sources/multi_thread_solution.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/sources/my_queue.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/sources/work_with_text_file.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_multi_thread.dir/sources/work_with_text_file.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/sources/configuration.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/sources/configuration.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/sources/directory_functions.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/sources/directory_functions.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/sources/one_thread_solution.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/sources/one_thread_solution.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/sources/work_with_text_file.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/_5_one_thread.dir/sources/work_with_text_file.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-release/_5.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/_5.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/config.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/data.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/headers/archive_functions.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/archive_functions.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/headers/configuration.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/configuration.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/headers/directory_functions.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/directory_functions.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/headers/my_queue.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/dispatcher.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/headers/time_functions.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/time_functions.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/headers/work_with_text_file.h" beforeDir="false" afterPath="$PROJECT_DIR$/headers/work_with_text_file.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result_by_name.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result_by_number.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/archive_functions.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/archive_functions.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/configuration.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/configuration.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/directory_functions.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/directory_functions.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/multi_thread_solution.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/multi_thread_solution.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/one_thread_solution.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/one_thread_solution.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/work_with_text_file.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sources/work_with_text_file.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-release/" />
@@ -90,92 +28,8 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/multi_thread_solution.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
-              <folding>
-                <element signature="e#157#177#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/work_with_text_file.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1083">
-              <caret line="80" column="25" selection-start-line="80" selection-start-column="25" selection-end-line="80" selection-end-column="25" />
-              <folding>
-                <element signature="e#157#174#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/one_thread_solution.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1122">
-              <caret line="66" column="51" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
-              <folding>
-                <element signature="e#157#183#0" expanded="true" />
-                <marker date="1558360758008" expanded="true" signature="1937:2737" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/some_functions_for_one_thread_solution.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="43" column="38" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
-              <folding>
-                <element signature="e#208#228#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/headers/some_functions_for_one_thread_solution.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="93" selection-start-line="10" selection-start-column="93" selection-end-line="10" selection-end-column="93" />
-              <folding>
-                <element signature="e#262#279#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sources/archive_functions.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1377">
-              <caret line="81" selection-start-line="81" selection-end-line="81" selection-end-column="66" />
-              <folding>
-                <element signature="e#157#176#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="36" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -240,23 +94,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="_5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zip_lab_part_2" type="b2602c69:ProjectViewProjectNode" />
               <item name="zip_lab_part_2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zip_lab_part_2" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zip_lab_part_2" type="462c0819:PsiDirectoryNode" />
-              <item name="headers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="_5" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zip_lab_part_2" type="462c0819:PsiDirectoryNode" />
-              <item name="sources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -293,12 +132,12 @@
     </option>
   </component>
   <component name="RunManager" selected="CMake Application._5_multi_thread">
-    <configuration name="_5_multi_thread" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="config.txt" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="_5" TARGET_NAME="_5_multi_thread" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="_5" RUN_TARGET_NAME="_5_multi_thread">
+    <configuration name="_5_multi_thread" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="config.txt" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_5_multi_thread" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="_5_multi_thread">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_5_one_thread" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="config.txt" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="_5" TARGET_NAME="_5_one_thread" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="_5" RUN_TARGET_NAME="_5_one_thread">
+    <configuration name="_5_one_thread" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="config.txt" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="_5_one_thread" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="_5_one_thread">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -328,23 +167,22 @@
       <workItem from="1558275072850" duration="9980000" />
       <workItem from="1558302867274" duration="1952000" />
       <workItem from="1558345901822" duration="2399000" />
-      <workItem from="1558356842791" duration="3108000" />
+      <workItem from="1558356842791" duration="3573000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76381000" />
+    <option name="totallyTimeSpent" value="76846000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4978903" visible="true" weight="0.295302" />
       <window_info id="Structure" order="1" sideWeight="0.5021097" side_tool="true" weight="0.28322148" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -353,7 +191,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="CMake" order="11" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="CMake" order="11" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.39235127" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -515,19 +353,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/one_thread_solution.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1122">
-          <caret line="66" column="51" selection-start-line="66" selection-start-column="51" selection-end-line="66" selection-end-column="51" />
+        <state relative-caret-position="1326">
+          <caret line="78" column="51" selection-start-line="78" selection-start-column="51" selection-end-line="78" selection-end-column="51" />
           <folding>
             <element signature="e#157#183#0" expanded="true" />
-            <marker date="1558360758008" expanded="true" signature="1937:2737" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/archive_functions.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="81" selection-start-line="81" selection-end-line="81" selection-end-column="66" />
+        <state relative-caret-position="1445">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
           <folding>
             <element signature="e#157#176#0" expanded="true" />
           </folding>
@@ -536,8 +373,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sources/work_with_text_file.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1083">
-          <caret line="80" column="25" selection-start-line="80" selection-start-column="25" selection-end-line="80" selection-end-column="25" />
+        <state relative-caret-position="1338">
+          <caret line="95" column="25" selection-start-line="95" selection-start-column="25" selection-end-line="95" selection-end-column="25" />
           <folding>
             <element signature="e#157#174#0" expanded="true" />
           </folding>
@@ -546,8 +383,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="35" column="37" selection-start-line="35" selection-start-column="37" selection-end-line="36" selection-end-column="51" />
+        <state relative-caret-position="222">
+          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
         </state>
       </provider>
     </entry>
