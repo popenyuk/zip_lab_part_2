@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 infile="./example/"
 out_by_a="./result/result_by_name.txt"
 out_by_n="./result/result_by_number.txt"
 indexing_threads=4
 merging_threads=1
-=======
-infile="./example/data.zip"
-out_by_a="result_by_name.txt"
-out_by_n="result_by_number.txt"
-indexing_threads=4
-merging_threads=2
->>>>>>> 6565b9f1ae3fcf991cb7fc98f27c6ad1431b9375
