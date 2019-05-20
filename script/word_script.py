@@ -7,10 +7,10 @@ def parse_result(result):
 
 
 def check_results(data):
-    with open('../result_by_name.txt', 'r') as f:
+    with open('../result/result_by_name.txt', 'r') as f:
         res_name = f.readlines()
     f.close()
-    with open('../result_by_number.txt', 'r') as f:
+    with open('../result/result_by_number.txt', 'r') as f:
         res_number = f.readlines()
     f.close()
     return res_name == data[0] and res_number == data[1]
@@ -18,10 +18,10 @@ def check_results(data):
 
 def run_one_time(one_thread, input_file):
     subprocess.Popen([one_thread, input_file], stdout=subprocess.PIPE).communicate()[0].decode('utf-8')
-    with open('../result_by_name.txt', 'r') as f:
+    with open('../result/result_by_name.txt', 'r') as f:
         name = f.readlines()
     f.close()
-    with open('../result_by_number.txt', 'r') as f:
+    with open('../result/result_by_number.txt', 'r') as f:
         number = f.readlines()
     f.close()
     return [name, number]
@@ -29,20 +29,21 @@ def run_one_time(one_thread, input_file):
 
 def run_solution(times, config, file):
     data = run_one_time(file, config)
-    min_one_thread = sys.maxsize
-    results_are_same_2 = True
+    min_time = sys.maxsize
+    results_are_same = True
     for _ in range(times):
-        res_one = parse_result(
-            subprocess.Popen([file, config], stdout=subprocess.PIPE).communicate()[0].decode('utf-8'))
+        process = subprocess.Popen([file, config], stdout=subprocess.PIPE)
+        process.wait()
+        res = parse_result(process.stdout.read().decode('utf-8'))
 
         if not check_results(data):
-            results_are_same_2 = False
+            results_are_same = False
 
-        if int(res_one) < int(min_one_thread):
-            min_one_thread = res_one
+        if int(res) < int(min_time):
+            min_time = res
 
-    print("Running time: " + min_one_thread)
-    if results_are_same_2:
+    print("Running time: " + min_time)
+    if results_are_same:
         print("Results are the same for all the one solutions runs")
     else:
         print("Results are NOT the same for all the one solutions runs")
@@ -56,10 +57,8 @@ def main():
         print('\nUsage for one_thread: <program_name> <times_to_run_the_program> <configuration_file>')
         exit(-1)
 
-
-
-    one_thread = './_5_one_thread'
-    multi_thread = './_5_multi_thread'
+    one_thread = '../bin/_5_one_thread'
+    multi_thread = '../bin/_5_multi_thread'
 
     times = int(sys.argv[1])
     if len(sys.argv) == 3:
