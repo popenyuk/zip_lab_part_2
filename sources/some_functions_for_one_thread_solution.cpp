@@ -1,5 +1,5 @@
 // This is a personal academic project. Dear PVS-Studio, please check it.
-// PVS-Studio Static Code Analyzer for C, C++, C#, and Java: http://www.viva64.com#include "some_functions_for_one_thread_solution.h"
+// PVS-Studio Static Code Analyzer for C, C++, C#, and Java: http://www.viva64.com
 #include <archive.h>
 #include <archive_entry.h>
 #include "archive_functions.h"
@@ -45,7 +45,7 @@ vector<string> read_txt_files_from_directory_one_thread(const string &folder) {
             }
         }
         if (it->path().extension() == ".txt") {
-            files.push_back((*it).path().string());
+            files.push_back(it->path().string());
         }
     }
     return files;

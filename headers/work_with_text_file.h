@@ -6,7 +6,6 @@
 #include <string>
 #include "dispatcher.h"
 #include "unordered_map"
-#include <boost/locale.hpp>
 
 std::string find_extension(const std::string &filename);
 

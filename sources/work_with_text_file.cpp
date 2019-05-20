@@ -1,10 +1,9 @@
 // This is a personal academic project. Dear PVS-Studio, please check it.
 // PVS-Studio Static Code Analyzer for C, C++, C#, and Java: http://www.viva64.com
-#include <thread>
 #include <fstream>
 #include <sstream>
 #include <iomanip>
-#include <iostream>
+#include <boost/locale.hpp>
 #include "archive_functions.h"
 #include "work_with_text_file.h"
 #include "directory_functions.h"
@@ -62,11 +61,11 @@ void count_words(vector<string> &words_vector, unordered_map<string, size_t> &wo
         words[fold_case(normalize(w, norm_nfd))]++;
 }
 
-const bool number_compare(pair<string, size_t> &a, pair<string, size_t> &b) {
+const bool number_compare(const pair<string, size_t> &a, const pair<string, size_t> &b) {
     return a.second < b.second;
 }
 
-const bool words_compare(pair<string, size_t> &a, pair<string, size_t> &b) {
+const bool words_compare(const pair<string, size_t> &a, const pair<string, size_t> &b) {
     return a.first < b.first;
 }
 
@@ -82,14 +81,14 @@ void process(dispatcher *current, const string &inputed_data) {
     unordered_map<string, size_t> words_map;
     separate_by_words(inputed_data, words);
     count_words(words, words_map);
-    (*current).push_result(words_map);
+    current->push_result(words_map);
 }
 
 void process_the_file(dispatcher *current) {
     string new_data;
-    while ((*current).get_status_of_processing_data()) {
-        (*current).wait_signal();
-        if ((*current).try_pop(new_data)) {
+    while (current->get_status_of_processing_data()) {
+        current->wait_signal();
+        if (current->try_pop(new_data)) {
             process(current, new_data);
         }
     }
@@ -98,13 +97,13 @@ void process_the_file(dispatcher *current) {
 void process_result(dispatcher *current) {
     unordered_map<string, size_t> words_map_1;
     unordered_map<string, size_t> words_map_2;
-    while ((*current).get_status_of_processing_result()) {
-        (*current).wait_signal_result();
-        if ((*current).try_pop_result(words_map_1, words_map_2)) {
+    while (current->get_status_of_processing_result()) {
+        current->wait_signal_result();
+        if (current->try_pop_result(words_map_1, words_map_2)) {
             for (auto &word:words_map_2) {
                 words_map_1[word.first] += word.second;
             }
-            (*current).push_result(words_map_1);
+            current->push_result(words_map_1);
         }
     }
 }

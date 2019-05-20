@@ -4,7 +4,6 @@
 #define INC_5_CONFIGURATION_H
 
 #include <string>
-#include <vector>
 
 struct config {
     std::string in_file;

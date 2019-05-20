@@ -33,6 +33,13 @@ CMakeFiles/_5_one_thread.dir/sources/one_thread_solution.cpp.obj: ../headers/tim
 CMakeFiles/_5_one_thread.dir/sources/one_thread_solution.cpp.obj: ../headers/work_with_text_file.h
 CMakeFiles/_5_one_thread.dir/sources/one_thread_solution.cpp.obj: ../sources/one_thread_solution.cpp
 
+CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.obj: ../headers/archive_functions.h
+CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.obj: ../headers/configuration.h
+CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.obj: ../headers/dispatcher.h
+CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.obj: ../headers/some_functions_for_one_thread_solution.h
+CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.obj: ../headers/work_with_text_file.h
+CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.obj: ../sources/some_functions_for_one_thread_solution.cpp
+
 CMakeFiles/_5_one_thread.dir/sources/work_with_text_file.cpp.obj: ../headers/archive_functions.h
 CMakeFiles/_5_one_thread.dir/sources/work_with_text_file.cpp.obj: ../headers/configuration.h
 CMakeFiles/_5_one_thread.dir/sources/work_with_text_file.cpp.obj: ../headers/directory_functions.h

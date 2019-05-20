@@ -40,12 +40,6 @@ configuration.h
 condition_variable
 -
 
-../headers/time_functions.h
-atomic
--
-chrono
--
-
 ../headers/work_with_text_file.h
 string
 -
@@ -56,19 +50,25 @@ unordered_map
 boost/locale.hpp
 -
 
-D:/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/multi_thread_solution.cpp
-algorithm
+D:/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/work_with_text_file.cpp
+thread
 -
-dispatcher.h
-D:/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/dispatcher.h
-configuration.h
-D:/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/configuration.h
-time_functions.h
-D:/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/time_functions.h
+fstream
+-
+sstream
+-
+iomanip
+-
+iostream
+-
 archive_functions.h
 D:/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/archive_functions.h
-directory_functions.h
-D:/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/directory_functions.h
 work_with_text_file.h
 D:/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/work_with_text_file.h
+directory_functions.h
+D:/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/directory_functions.h
+boost/locale/boundary/facets.hpp
+-
+boost/locale/localization_backend.hpp
+-
 

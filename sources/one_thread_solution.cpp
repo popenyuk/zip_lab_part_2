@@ -2,7 +2,6 @@
 // PVS-Studio Static Code Analyzer for C, C++, C#, and Java: http://www.viva64.com
 #include "configuration.h"
 #include "time_functions.h"
-#include <condition_variable>
 #include "archive_functions.h"
 #include "work_with_text_file.h"
 #include "directory_functions.h"
