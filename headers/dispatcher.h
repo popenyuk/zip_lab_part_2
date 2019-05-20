@@ -28,14 +28,21 @@ class dispatcher {
     std::queue<unordered_map<std::string, size_t >> result_queue;
 
 public:
+<<<<<<< HEAD
     dispatcher(const config &conf);
+=======
+    dispatcher(const config &conf, const std::vector<std::string> &input);
+>>>>>>> 6565b9f1ae3fcf991cb7fc98f27c6ad1431b9375
 
     size_t get_size();
 
     size_t get_result_size();
 
+<<<<<<< HEAD
     std::string get_input_file();
 
+=======
+>>>>>>> 6565b9f1ae3fcf991cb7fc98f27c6ad1431b9375
     void push_data(const std::string &element);
 
     void push_result(const unordered_map<std::string, size_t> &result);
@@ -55,6 +62,13 @@ public:
     bool get_status_of_processing_data();
 
     bool get_status_of_processing_result();
+<<<<<<< HEAD
+=======
+
+    bool will_be_next_data();
+
+    bool will_be_next_result();
+>>>>>>> 6565b9f1ae3fcf991cb7fc98f27c6ad1431b9375
 };
 
 #endif //_5_DISPATCHER_H

@@ -10,7 +10,11 @@
 
 std::string find_extension(const std::string &filename);
 
+<<<<<<< HEAD
 std::string read_file_into_string(const std::string &filename);
+=======
+void read_file_into_string(const std::string &filename, std::string &str);
+>>>>>>> 6565b9f1ae3fcf991cb7fc98f27c6ad1431b9375
 
 void separate_by_words(const std::string &text, std::vector<std::string> &words);
 
@@ -27,6 +31,9 @@ void process_the_file(dispatcher *current);
 
 void process_result(dispatcher *current);
 
+<<<<<<< HEAD
 void search_and_add_files(dispatcher *current);
 
+=======
+>>>>>>> 6565b9f1ae3fcf991cb7fc98f27c6ad1431b9375
 #endif //INC_5_WORK_WITH_FILE_H

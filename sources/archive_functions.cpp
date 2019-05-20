@@ -4,7 +4,10 @@
 #include <archive.h>
 #include <archive_entry.h>
 #include "archive_functions.h"
+<<<<<<< HEAD
 #include "work_with_text_file.h"
+=======
+>>>>>>> 6565b9f1ae3fcf991cb7fc98f27c6ad1431b9375
 
 using std::string;
 using std::vector;
@@ -79,7 +82,12 @@ void extract(const string &filename) {
     archive_write_free(ext);
 }
 
+<<<<<<< HEAD
 void read_archive_entries(const string &path, dispatcher *current) {
+=======
+vector<string> read_archive_entries(const string &path) {
+    vector<string> entries;
+>>>>>>> 6565b9f1ae3fcf991cb7fc98f27c6ad1431b9375
     struct archive *a;
     struct archive_entry *entry;
     int r;
@@ -91,10 +99,19 @@ void read_archive_entries(const string &path, dispatcher *current) {
     if (r != ARCHIVE_OK)
         throw runtime_error("Archive has been corrupted");
     while (archive_read_next_header(a, &entry) == ARCHIVE_OK) {
+<<<<<<< HEAD
         current->push_data(read_file_into_string(archive_entry_pathname(entry)));
+=======
+        entries.emplace_back(archive_entry_pathname(entry));
+>>>>>>> 6565b9f1ae3fcf991cb7fc98f27c6ad1431b9375
         archive_read_data_skip(a);
     }
     r = archive_read_free(a);
     if (r != ARCHIVE_OK)
         throw runtime_error("Archive has been corrupted");
+<<<<<<< HEAD
+=======
+
+    return entries;
+>>>>>>> 6565b9f1ae3fcf991cb7fc98f27c6ad1431b9375
 }

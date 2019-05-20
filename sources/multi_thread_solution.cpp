@@ -24,6 +24,10 @@ int main(int argc, char *argv[]) {
     locale loc = gen.generate("en_US.UTF-8");
     locale::global(loc);
     cout.imbue(loc);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6565b9f1ae3fcf991cb7fc98f27c6ad1431b9375
     string conf_file;
     if (argc < 2) {
         conf_file = "../config.dat";
@@ -33,6 +37,10 @@ int main(int argc, char *argv[]) {
     } else {
         conf_file = argv[1];
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6565b9f1ae3fcf991cb7fc98f27c6ad1431b9375
     config conf;
     try {
         conf = read_config(conf_file);
@@ -40,9 +48,31 @@ int main(int argc, char *argv[]) {
         cerr << "Invalid argument." << endl;
         exit(-3);
     }
+<<<<<<< HEAD
     auto start_time = get_current_time_fenced();
 //--------------------------------   Counting words
     dispatcher processing(conf);
+=======
+
+    auto start_time = get_current_time_fenced();
+//--------------------------------   Reading file in memory
+    vector<string> files;
+    auto extension = find_extension(conf.in_file);
+    transform(extension.begin(), extension.end(), extension.begin(), ::tolower);
+    if (extension == "zip") {
+        extract(conf.in_file);
+        files = read_archive_entries(conf.in_file);
+    } else if (extension == "txt") {
+        files.push_back(conf.in_file);
+    } else if (extension[extension.size() - 1] == '/') {
+        files = read_txt_files_from_directory(conf.in_file);
+    } else {
+        cerr << "Wrong file extension." << endl;
+        exit(-2);
+    }
+//--------------------------------   Counting words
+    dispatcher processing(conf, files);
+>>>>>>> 6565b9f1ae3fcf991cb7fc98f27c6ad1431b9375
     processing.run();
 //--------------------------------   Sorting
     auto by_numbers = sort_words(processing.get_result());
