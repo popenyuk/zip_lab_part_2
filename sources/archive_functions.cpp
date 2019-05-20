@@ -48,7 +48,7 @@ void extract(const string &filename) {
     archive_write_disk_set_options(ext, flags);
     archive_write_disk_set_standard_lookup(ext);
     if (archive_read_open_filename(a, filename.c_str(), 0))
-        throw runtime_error("Archive has been corrupted");
+        return;
     for (;;) {
         r = archive_read_next_header(a, &entry);
         if (r == ARCHIVE_EOF)
@@ -56,7 +56,7 @@ void extract(const string &filename) {
         if (r < ARCHIVE_OK)
             fprintf(stderr, "%s\n", archive_error_string(a));
         if (r < ARCHIVE_WARN)
-            throw runtime_error("Archive has been corrupted");
+            return;
         r = archive_write_header(ext, entry);
         if (r < ARCHIVE_OK)
             fprintf(stderr, "%s\n", archive_error_string(ext));
@@ -65,13 +65,13 @@ void extract(const string &filename) {
             if (r < ARCHIVE_OK)
                 fprintf(stderr, "%s\n", archive_error_string(ext));
             if (r < ARCHIVE_WARN)
-                throw runtime_error("Archive has been corrupted");
+                return;
         }
         r = archive_write_finish_entry(ext);
         if (r < ARCHIVE_OK)
             fprintf(stderr, "%s\n", archive_error_string(ext));
         if (r < ARCHIVE_WARN)
-            throw runtime_error("Archive has been corrupted");
+           return;
     }
     archive_read_close(a);
     archive_read_free(a);
@@ -89,12 +89,12 @@ void read_archive_entries(const string &path, dispatcher *current) {
     archive_read_support_format_all(a);
     r = archive_read_open_filename(a, path.c_str(), 0); // Note 1
     if (r != ARCHIVE_OK)
-        throw runtime_error("Archive has been corrupted");
+        return;
     while (archive_read_next_header(a, &entry) == ARCHIVE_OK) {
         current->push_data(read_file_into_string(archive_entry_pathname(entry)));
         archive_read_data_skip(a);
     }
     r = archive_read_free(a);
     if (r != ARCHIVE_OK)
-        throw runtime_error("Archive has been corrupted");
+        return;
 }
