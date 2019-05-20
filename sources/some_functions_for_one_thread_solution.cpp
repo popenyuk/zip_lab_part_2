@@ -39,10 +39,12 @@ vector<string> read_txt_files_from_directory_one_thread(const string &folder) {
     vector<string> files;
     for (recursive_directory_iterator it(folder), end; it != end; ++it) {
         if(it->path().extension() == ".ZIP"){
-            extract(it->path().string());
-            for( auto &file:read_archive_entries_one_thread(it->path().string())){
-                files.push_back(file);
-            }
+            try{
+                extract(it->path().string());
+                for( auto &file:read_archive_entries_one_thread(it->path().string())){
+                    files.push_back(file);
+                }
+            }catch(runtime_error){};
         }
         if (it->path().extension() == ".txt") {
             files.push_back(it->path().string());
