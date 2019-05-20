@@ -3,10 +3,9 @@
 #ifndef _5_DIRECTORY_FUNCTIONS_H
 #define _5_DIRECTORY_FUNCTIONS_H
 
-#include <vector>
 #include <string>
-#include "boost/filesystem.hpp"
+#include "dispatcher.h"
 
-std::vector<std::string> read_txt_files_from_directory(const std::string &folder);
+void read_txt_files_from_directory(const std::string &folder, dispatcher *current);
 
 #endif //_5_DIRECTORY_FUNCTIONS_H

@@ -1,14 +1,12 @@
-//
-// Created by Yevhenii on 23/04/2019.
-//
-
+// This is a personal academic project. Dear PVS-Studio, please check it.
+// PVS-Studio Static Code Analyzer for C, C++, C#, and Java: http://www.viva64.com
 #ifndef INC_5_CONFIGURATION_H
 #define INC_5_CONFIGURATION_H
 
+#include <string>
 #include <vector>
-#include <fstream>
 
-struct config{
+struct config {
     std::string in_file;
     std::string out_by_name;
     std::string out_by_number;
@@ -16,6 +14,6 @@ struct config{
     int merging_threads;
 };
 
-config read_config(const std::string& filename);
+config read_config(const std::string &filename);
 
 #endif //INC_5_CONFIGURATION_H

@@ -226,6 +226,36 @@ sources/directory_functions.cpp.s:
 	$(MAKE) -f CMakeFiles/_5_multi_thread.dir/build.make CMakeFiles/_5_multi_thread.dir/sources/directory_functions.cpp.s
 .PHONY : sources/directory_functions.cpp.s
 
+sources/dispatcher.o: sources/dispatcher.cpp.o
+
+.PHONY : sources/dispatcher.o
+
+# target to build an object file
+sources/dispatcher.cpp.o:
+	$(MAKE) -f CMakeFiles/_5_one_thread.dir/build.make CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.o
+	$(MAKE) -f CMakeFiles/_5_multi_thread.dir/build.make CMakeFiles/_5_multi_thread.dir/sources/dispatcher.cpp.o
+.PHONY : sources/dispatcher.cpp.o
+
+sources/dispatcher.i: sources/dispatcher.cpp.i
+
+.PHONY : sources/dispatcher.i
+
+# target to preprocess a source file
+sources/dispatcher.cpp.i:
+	$(MAKE) -f CMakeFiles/_5_one_thread.dir/build.make CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.i
+	$(MAKE) -f CMakeFiles/_5_multi_thread.dir/build.make CMakeFiles/_5_multi_thread.dir/sources/dispatcher.cpp.i
+.PHONY : sources/dispatcher.cpp.i
+
+sources/dispatcher.s: sources/dispatcher.cpp.s
+
+.PHONY : sources/dispatcher.s
+
+# target to generate assembly for a file
+sources/dispatcher.cpp.s:
+	$(MAKE) -f CMakeFiles/_5_one_thread.dir/build.make CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.s
+	$(MAKE) -f CMakeFiles/_5_multi_thread.dir/build.make CMakeFiles/_5_multi_thread.dir/sources/dispatcher.cpp.s
+.PHONY : sources/dispatcher.cpp.s
+
 sources/multi_thread_solution.o: sources/multi_thread_solution.cpp.o
 
 .PHONY : sources/multi_thread_solution.o
@@ -280,6 +310,33 @@ sources/one_thread_solution.cpp.s:
 	$(MAKE) -f CMakeFiles/_5_one_thread.dir/build.make CMakeFiles/_5_one_thread.dir/sources/one_thread_solution.cpp.s
 .PHONY : sources/one_thread_solution.cpp.s
 
+sources/some_functions_for_one_thread_solution.o: sources/some_functions_for_one_thread_solution.cpp.o
+
+.PHONY : sources/some_functions_for_one_thread_solution.o
+
+# target to build an object file
+sources/some_functions_for_one_thread_solution.cpp.o:
+	$(MAKE) -f CMakeFiles/_5_one_thread.dir/build.make CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.o
+.PHONY : sources/some_functions_for_one_thread_solution.cpp.o
+
+sources/some_functions_for_one_thread_solution.i: sources/some_functions_for_one_thread_solution.cpp.i
+
+.PHONY : sources/some_functions_for_one_thread_solution.i
+
+# target to preprocess a source file
+sources/some_functions_for_one_thread_solution.cpp.i:
+	$(MAKE) -f CMakeFiles/_5_one_thread.dir/build.make CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.i
+.PHONY : sources/some_functions_for_one_thread_solution.cpp.i
+
+sources/some_functions_for_one_thread_solution.s: sources/some_functions_for_one_thread_solution.cpp.s
+
+.PHONY : sources/some_functions_for_one_thread_solution.s
+
+# target to generate assembly for a file
+sources/some_functions_for_one_thread_solution.cpp.s:
+	$(MAKE) -f CMakeFiles/_5_one_thread.dir/build.make CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.s
+.PHONY : sources/some_functions_for_one_thread_solution.cpp.s
+
 sources/work_with_text_file.o: sources/work_with_text_file.cpp.o
 
 .PHONY : sources/work_with_text_file.o
@@ -329,12 +386,18 @@ help:
 	@echo "... sources/directory_functions.o"
 	@echo "... sources/directory_functions.i"
 	@echo "... sources/directory_functions.s"
+	@echo "... sources/dispatcher.o"
+	@echo "... sources/dispatcher.i"
+	@echo "... sources/dispatcher.s"
 	@echo "... sources/multi_thread_solution.o"
 	@echo "... sources/multi_thread_solution.i"
 	@echo "... sources/multi_thread_solution.s"
 	@echo "... sources/one_thread_solution.o"
 	@echo "... sources/one_thread_solution.i"
 	@echo "... sources/one_thread_solution.s"
+	@echo "... sources/some_functions_for_one_thread_solution.o"
+	@echo "... sources/some_functions_for_one_thread_solution.i"
+	@echo "... sources/some_functions_for_one_thread_solution.s"
 	@echo "... sources/work_with_text_file.o"
 	@echo "... sources/work_with_text_file.i"
 	@echo "... sources/work_with_text_file.s"

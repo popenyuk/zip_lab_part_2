@@ -146,8 +146,12 @@
 			<Option target="_5_one_thread"/>
 			<Option target="_5_multi_thread"/>
 		</Unit>
-		<Unit filename="/mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/headers/my_queue.h">
+		<Unit filename="/mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/headers/dispatcher.h">
+			<Option target="_5_one_thread"/>
 			<Option target="_5_multi_thread"/>
+		</Unit>
+		<Unit filename="/mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/headers/some_functions_for_one_thread_solution.h">
+			<Option target="_5_one_thread"/>
 		</Unit>
 		<Unit filename="/mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/headers/time_functions.h">
 			<Option target="_5_one_thread"/>
@@ -169,10 +173,17 @@
 			<Option target="_5_one_thread"/>
 			<Option target="_5_multi_thread"/>
 		</Unit>
+		<Unit filename="/mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/dispatcher.cpp">
+			<Option target="_5_one_thread"/>
+			<Option target="_5_multi_thread"/>
+		</Unit>
 		<Unit filename="/mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/multi_thread_solution.cpp">
 			<Option target="_5_multi_thread"/>
 		</Unit>
 		<Unit filename="/mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/one_thread_solution.cpp">
+			<Option target="_5_one_thread"/>
+		</Unit>
+		<Unit filename="/mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/some_functions_for_one_thread_solution.cpp">
 			<Option target="_5_one_thread"/>
 		</Unit>
 		<Unit filename="/mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/work_with_text_file.cpp">

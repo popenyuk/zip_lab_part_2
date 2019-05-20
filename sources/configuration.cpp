@@ -1,17 +1,21 @@
-//
-// Created by Yevhenii on 23/04/2019.
-//
-
-#include "../headers/configuration.h"
+// This is a personal academic project. Dear PVS-Studio, please check it.
+// PVS-Studio Static Code Analyzer for C, C++, C#, and Java: http://www.viva64.com
+#include <fstream>
 #include <iostream>
+#include "configuration.h"
 
-config read_config(const std::string &filename) {
+using std::stoi;
+using std::string;
+using std::vector;
+using std::ifstream;
+
+config read_config(const string &filename) {
     config conf{};
-    std::string s;
-    std::string s1;
-    std::string s2;
-    std::ifstream infile(filename);
-    std::vector<std::string> conf_vector;
+    string s;
+    string s1;
+    string s2;
+    ifstream infile(filename);
+    vector<string> conf_vector;
 
     for (int i = 0; i < 3; ++i) {
         infile >> s;
@@ -19,12 +23,13 @@ config read_config(const std::string &filename) {
     }
     infile >> s;
     s1 = s.substr(s.find('=') + 1, s.find('\\'));
+    infile >> s;
     s2 = s.substr(s.find('=') + 1, s.find('\\'));
 
     conf.in_file = conf_vector[0];
     conf.out_by_name = conf_vector[1];
     conf.out_by_number = conf_vector[2];
-    conf.indexing_threads = std::stoi(s1);
-    conf.merging_threads = std::stoi(s2);
+    conf.indexing_threads = stoi(s1);
+    conf.merging_threads = stoi(s2);
     return conf;
 }

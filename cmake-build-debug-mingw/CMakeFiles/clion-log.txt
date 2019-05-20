@@ -1,0 +1,12 @@
+"C:\Users\Zenovii Popenyuk\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\191.7141.37\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\Projects\Second_year\Second_semester\ACS\zip_lab_part_2
+-- Found the following ICU libraries:
+--   uc (required)
+--   i18n (required)
+-- Boost version: 1.69.0
+-- Found the following Boost libraries:
+--   filesystem
+--   locale
+--   system
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/cmake-build-debug-mingw

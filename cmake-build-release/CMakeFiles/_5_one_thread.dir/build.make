@@ -177,13 +177,63 @@ CMakeFiles/_5_one_thread.dir/sources/directory_functions.cpp.o.provides: CMakeFi
 CMakeFiles/_5_one_thread.dir/sources/directory_functions.cpp.o.provides.build: CMakeFiles/_5_one_thread.dir/sources/directory_functions.cpp.o
 
 
+CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.o: CMakeFiles/_5_one_thread.dir/flags.make
+CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.o: ../sources/dispatcher.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.o -c /mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/dispatcher.cpp
+
+CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/dispatcher.cpp > CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.i
+
+CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/dispatcher.cpp -o CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.s
+
+CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.o.requires:
+
+.PHONY : CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.o.requires
+
+CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.o.provides: CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.o.requires
+	$(MAKE) -f CMakeFiles/_5_one_thread.dir/build.make CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.o.provides.build
+.PHONY : CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.o.provides
+
+CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.o.provides.build: CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.o
+
+
+CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.o: CMakeFiles/_5_one_thread.dir/flags.make
+CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.o: ../sources/some_functions_for_one_thread_solution.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.o -c /mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/some_functions_for_one_thread_solution.cpp
+
+CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/some_functions_for_one_thread_solution.cpp > CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.i
+
+CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/sources/some_functions_for_one_thread_solution.cpp -o CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.s
+
+CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.o.requires:
+
+.PHONY : CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.o.requires
+
+CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.o.provides: CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.o.requires
+	$(MAKE) -f CMakeFiles/_5_one_thread.dir/build.make CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.o.provides.build
+.PHONY : CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.o.provides
+
+CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.o.provides.build: CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.o
+
+
 # Object files for target _5_one_thread
 _5_one_thread_OBJECTS = \
 "CMakeFiles/_5_one_thread.dir/sources/one_thread_solution.cpp.o" \
 "CMakeFiles/_5_one_thread.dir/sources/archive_functions.cpp.o" \
 "CMakeFiles/_5_one_thread.dir/sources/configuration.cpp.o" \
 "CMakeFiles/_5_one_thread.dir/sources/work_with_text_file.cpp.o" \
-"CMakeFiles/_5_one_thread.dir/sources/directory_functions.cpp.o"
+"CMakeFiles/_5_one_thread.dir/sources/directory_functions.cpp.o" \
+"CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.o" \
+"CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.o"
 
 # External object files for target _5_one_thread
 _5_one_thread_EXTERNAL_OBJECTS =
@@ -193,6 +243,8 @@ _5_one_thread_EXTERNAL_OBJECTS =
 ../bin/_5_one_thread: CMakeFiles/_5_one_thread.dir/sources/configuration.cpp.o
 ../bin/_5_one_thread: CMakeFiles/_5_one_thread.dir/sources/work_with_text_file.cpp.o
 ../bin/_5_one_thread: CMakeFiles/_5_one_thread.dir/sources/directory_functions.cpp.o
+../bin/_5_one_thread: CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.o
+../bin/_5_one_thread: CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.o
 ../bin/_5_one_thread: CMakeFiles/_5_one_thread.dir/build.make
 ../bin/_5_one_thread: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
 ../bin/_5_one_thread: /usr/lib/x86_64-linux-gnu/libboost_locale.so
@@ -200,7 +252,7 @@ _5_one_thread_EXTERNAL_OBJECTS =
 ../bin/_5_one_thread: /usr/lib/x86_64-linux-gnu/libicuuc.so
 ../bin/_5_one_thread: /usr/lib/x86_64-linux-gnu/libicui18n.so
 ../bin/_5_one_thread: CMakeFiles/_5_one_thread.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ../bin/_5_one_thread"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/d/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ../bin/_5_one_thread"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/_5_one_thread.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -213,6 +265,8 @@ CMakeFiles/_5_one_thread.dir/requires: CMakeFiles/_5_one_thread.dir/sources/arch
 CMakeFiles/_5_one_thread.dir/requires: CMakeFiles/_5_one_thread.dir/sources/configuration.cpp.o.requires
 CMakeFiles/_5_one_thread.dir/requires: CMakeFiles/_5_one_thread.dir/sources/work_with_text_file.cpp.o.requires
 CMakeFiles/_5_one_thread.dir/requires: CMakeFiles/_5_one_thread.dir/sources/directory_functions.cpp.o.requires
+CMakeFiles/_5_one_thread.dir/requires: CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.o.requires
+CMakeFiles/_5_one_thread.dir/requires: CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.o.requires
 
 .PHONY : CMakeFiles/_5_one_thread.dir/requires
 
