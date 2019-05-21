@@ -57,8 +57,9 @@ void separate_by_words(const string &text, vector<string> &words) {
 }
 
 void count_words(vector<string> &words_vector, unordered_map<string, size_t> &words) {
-    for (const auto &w: words_vector)
+    for (const auto &w: words_vector) {
         words[fold_case(normalize(w, norm_nfd))]++;
+    }
 }
 
 const bool number_compare(const pair<string, size_t> &a, const pair<string, size_t> &b) {

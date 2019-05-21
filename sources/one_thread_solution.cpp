@@ -62,7 +62,6 @@ int main(int argc, char *argv[]) {
         cerr << "Wrong file extension." << endl;
         exit(-2);
     }
-    cout << "Readed" << endl;
 //-------------------------------- Reading file in memory
     string string_file;
     vector<string> words;
