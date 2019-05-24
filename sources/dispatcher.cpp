@@ -24,12 +24,12 @@ dispatcher::dispatcher(const config &conf) : conf_file(conf) {
 }
 
 size_t dispatcher::get_size() {
-    lock_guard <mutex> lock(mtx);
+    lock_guard<mutex> lock(mtx);
     return process_data.size();
 }
 
 size_t dispatcher::get_result_size() {
-    lock_guard <mutex> lock(mtx_for_result);
+    lock_guard<mutex> lock(mtx_for_result);
     return result_queue.size();
 }
 
@@ -47,19 +47,21 @@ void dispatcher::push_data(const string &element) {
 //        will_new_result_be = true;
 //    }
     process_data.push(element);
+    lock.unlock();
     cv.notify_one();
 }
 
-void dispatcher::push_result(const unordered_map <string, size_t> &result) {
-    lock_guard <mutex> lock(mtx_for_result);
+void dispatcher::push_result(const unordered_map<string, size_t> &result) {
+    unique_lock<mutex> lock(mtx_for_result);
     result_queue.push(result);
     if (result_queue.size() >= 2) {
+        lock.unlock();
         cv_for_result.notify_one();
     }
 }
 
 bool dispatcher::try_pop(string &value) {
-    lock_guard <mutex> lock(mtx);
+    lock_guard<mutex> lock(mtx);
     if (!process_data.empty()) {
         value = process_data.front();
         process_data.pop();
@@ -73,8 +75,8 @@ bool dispatcher::try_pop(string &value) {
     return false;
 }
 
-bool dispatcher::try_pop_result(unordered_map <string, size_t> &value1, unordered_map <string, size_t> &value2) {
-    lock_guard <mutex> lock(mtx_for_result);
+bool dispatcher::try_pop_result(unordered_map<string, size_t> &value1, unordered_map<string, size_t> &value2) {
+    lock_guard<mutex> lock(mtx_for_result);
     if (result_queue.size() >= 2) {
         value1 = result_queue.front();
         result_queue.pop();
@@ -90,14 +92,14 @@ bool dispatcher::try_pop_result(unordered_map <string, size_t> &value1, unordere
 }
 
 void dispatcher::wait_signal() {
-    unique_lock <mutex> lock(mtx);
+    unique_lock<mutex> lock(mtx);
     if (will_new_data_be) {
         cv.wait(lock);
     }
 }
 
 void dispatcher::wait_signal_result() {
-    unique_lock <mutex> lock(mtx_for_result);
+    unique_lock<mutex> lock(mtx_for_result);
     if (will_new_result_be) {
         cv_for_result.wait(lock);
     }
@@ -112,8 +114,9 @@ void dispatcher::run() {
     }
     search_and_add_files(this);
     {
-        lock_guard <mutex> lock(mtx);
+        unique_lock<mutex> lock(mtx);
         will_new_data_be = false;
+        lock.unlock();
         cv.notify_all();
     }
     total_end_for_data = true;
@@ -125,6 +128,7 @@ void dispatcher::run() {
         unique_lock<mutex> lock(mtx_for_result);
         total_end_for_result = true;
         will_new_result_be = false;
+        lock.unlock();
         cv_for_result.notify_all();
     }
     for (auto &merging_thread:merging_threads) {
@@ -133,18 +137,18 @@ void dispatcher::run() {
     }
 }
 
-unordered_map <std::string, size_t> &dispatcher::get_result() {
-    lock_guard <mutex> lock(mtx_for_result);
+unordered_map<std::string, size_t> &dispatcher::get_result() {
+    lock_guard<mutex> lock(mtx_for_result);
     return result_queue.front();
 }
 
 bool dispatcher::get_status_of_processing_data() {
-    lock_guard <mutex> lock(mtx);
+    lock_guard<mutex> lock(mtx);
     return (!process_data.empty()) || !total_end_for_data;
 }
 
 bool dispatcher::get_status_of_processing_result() {
-    lock_guard <mutex> lock(mtx_for_result);
+    lock_guard<mutex> lock(mtx_for_result);
     return (result_queue.size() != 1) || !total_end_for_result;
 }
 
