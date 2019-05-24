@@ -35,17 +35,18 @@ size_t dispatcher::get_result_size() {
 
 void dispatcher::push_data(const string &element) {
     unique_lock<mutex> lock(mtx);
-//    if ((get_size() + get_result_size()) > conf_file.max_number_of_tasks) {
-//        unique_lock <mutex> lock(mtx);
-//        notify_or_not = true;
-//        will_new_data_be = false;
-//        will_new_result_be = false;
-//        cv.notify_all();
-//        cv_for_result.notify_all();
-//        cv_for_push_data.wait(lock);
-//        will_new_data_be = true;
-//        will_new_result_be = true;
-//    }
+    if ((process_data.size() + result_queue.size()) > conf_file.max_number_of_tasks) {
+        notify_or_not = true;
+        will_new_data_be = false;
+        will_new_result_be = false;
+        lock.unlock();
+        cv.notify_all();
+        lock.lock();
+        cv_for_result.notify_all();
+        cv_for_push_data.wait(lock);
+        will_new_data_be = true;
+        will_new_result_be = true;
+    }
     process_data.push(element);
     lock.unlock();
     cv.notify_one();
@@ -65,11 +66,11 @@ bool dispatcher::try_pop(string &value) {
     if (!process_data.empty()) {
         value = process_data.front();
         process_data.pop();
-//        if ((process_data.size() + result_queue.size()) < (conf_file.max_number_of_tasks / 2) && notify_or_not) {
-//            cv_for_push_data.notify_all();
-//            notify_or_not = false;
-//
-//        }
+        if ((process_data.size() + result_queue.size()) < (conf_file.max_number_of_tasks / 2) && notify_or_not) {
+            cv_for_push_data.notify_all();
+            notify_or_not = false;
+
+        }
         return true;
     }
     return false;
@@ -82,10 +83,10 @@ bool dispatcher::try_pop_result(unordered_map<string, size_t> &value1, unordered
         result_queue.pop();
         value2 = result_queue.front();
         result_queue.pop();
-//        if ((process_data.size() + result_queue.size()) < (conf_file.max_number_of_tasks / 2) && notify_or_not) {
-//            cv_for_push_data.notify_all();
-//            notify_or_not = false;
-//        }
+        if ((process_data.size() + result_queue.size()) < (conf_file.max_number_of_tasks / 2) && notify_or_not) {
+            cv_for_push_data.notify_all();
+            notify_or_not = false;
+        }
         return true;
     }
     return false;
@@ -113,24 +114,16 @@ void dispatcher::run() {
         merging_threads.emplace_back(process_result, this);
     }
     search_and_add_files(this);
-    {
-        unique_lock<mutex> lock(mtx);
-        will_new_data_be = false;
-        lock.unlock();
-        cv.notify_all();
-    }
+    will_new_data_be = false;
+    cv.notify_all();
     total_end_for_data = true;
     for (auto &indexing_thread:indexing_threads) {
         if (indexing_thread.joinable())
             indexing_thread.join();
     }
-    {
-        unique_lock<mutex> lock(mtx_for_result);
-        total_end_for_result = true;
-        will_new_result_be = false;
-        lock.unlock();
-        cv_for_result.notify_all();
-    }
+    total_end_for_result = true;
+    will_new_result_be = false;
+    cv_for_result.notify_all();
     for (auto &merging_thread:merging_threads) {
         if (merging_thread.joinable())
             merging_thread.join();
