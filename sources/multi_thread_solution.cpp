@@ -43,6 +43,7 @@ int main(int argc, char *argv[]) {
         exit(-3);
     }
     auto start_time = get_current_time_fenced();
+
 //--------------------------------   Counting words
     dispatcher processing(conf);
     processing.run();
@@ -51,13 +52,14 @@ int main(int argc, char *argv[]) {
     auto by_words = sort_words(processing.get_result(), false);
 //--------------------------------
     auto finish_time = get_current_time_fenced();
+    auto time_all_total = finish_time - start_time;
 //--------------------------------   Writing to the file
     write_to_file(conf.out_by_number, by_numbers);
     write_to_file(conf.out_by_name, by_words);
 //--------------------------------
-    auto time_all_total = finish_time - start_time;
 
-    cout << "Total time: " << to_us(time_all_total) << endl;
+
+    cout << "Total: " << to_us(time_all_total) << endl;
 
     return 0;
 }

@@ -11,6 +11,7 @@ struct config {
     std::string out_by_number;
     int indexing_threads;
     int merging_threads;
+    int max_number_of_tasks;
 };
 
 config read_config(const std::string &filename);

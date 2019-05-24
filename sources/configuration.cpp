@@ -12,9 +12,7 @@ using std::ifstream;
 
 config read_config(const string &filename) {
     config conf{};
-    string s;
-    string s1;
-    string s2;
+    string s, s1, s2, s3;
     ifstream infile(filename);
     vector<string> conf_vector;
 
@@ -26,11 +24,13 @@ config read_config(const string &filename) {
     s1 = s.substr(s.find('=') + 1, s.find('\\'));
     infile >> s;
     s2 = s.substr(s.find('=') + 1, s.find('\\'));
-
+    infile >> s;
+    s3 = s.substr(s.find('=') + 1, s.find('\\'));
     conf.in_file = conf_vector[0];
     conf.out_by_name = conf_vector[1];
     conf.out_by_number = conf_vector[2];
     conf.indexing_threads = stoi(s1);
     conf.merging_threads = stoi(s2);
+    conf.max_number_of_tasks = stoi(s3);
     return conf;
 }

@@ -66,7 +66,7 @@ int main(int argc, char *argv[]) {
     string string_file;
     vector<string> words;
     for (auto &in_file:files) {
-        string_file = read_file_into_string(in_file);
+        read_file_into_string(in_file, string_file);
         separate_by_words(string_file, words);
     }
 

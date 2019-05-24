@@ -3,6 +3,7 @@
 #include <fstream>
 #include <sstream>
 #include <iomanip>
+#include <iostream>
 #include <boost/locale.hpp>
 #include "archive_functions.h"
 #include "work_with_text_file.h"
@@ -23,8 +24,10 @@ using std::thread;
 using std::ifstream;
 using std::ofstream;
 using std::exception;
+using std::streamsize;
 using std::stringstream;
 using std::unordered_map;
+using std::numeric_limits;
 using boost::locale::norm_nfd;
 using boost::locale::fold_case;
 using boost::locale::boundary::word;
@@ -35,18 +38,25 @@ string find_extension(const string &filename) {
     return filename.substr(filename.find_last_of('.') + 1, filename.length());
 }
 
-string read_file_into_string(const string &filename) {
-    ifstream stream(filename);
-    stringstream buffer;
-    buffer << stream.rdbuf();
-    return buffer.str();
+void read_file_into_string(const string &filename, string &readed_file) {
+    ifstream file(filename);
+    auto const start_pos = file.tellg();
+    file.ignore(numeric_limits<streamsize>::max());
+    auto const char_count = file.gcount();
+    file.seekg(start_pos);
+    auto text = vector<char>((unsigned long) char_count);
+    (file).read(&text[0], text.size());
+    readed_file = string(text.begin(), text.end());
+    file.close();
 }
 
 void write_to_file(const string &filename, const vector<pair<string, size_t>> &words) {
     ofstream my_file;
     my_file.open(filename);
-    for (const auto &i: words)
+    for (const auto &i: words) {
         my_file << left << setw(15) << i.first << ":  " << i.second << endl;
+    }
+    my_file.close();
 }
 
 void separate_by_words(const string &text, vector<string> &words) {

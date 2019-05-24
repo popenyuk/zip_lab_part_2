@@ -9,7 +9,7 @@
 
 std::string find_extension(const std::string &filename);
 
-std::string read_file_into_string(const std::string &filename);
+void read_file_into_string(const std::string &filename, std::string &readed_file);
 
 void separate_by_words(const std::string &text, std::vector<std::string> &words);
 

@@ -1,4 +1,0 @@
-D:/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/cmake-build-debug-mingw/CMakeFiles/_5_one_thread.dir
-D:/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/cmake-build-debug-mingw/CMakeFiles/_5_multi_thread.dir
-D:/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/cmake-build-debug-mingw/CMakeFiles/edit_cache.dir
-D:/Projects/Second_year/Second_semester/ACS/zip_lab_part_2/cmake-build-debug-mingw/CMakeFiles/rebuild_cache.dir

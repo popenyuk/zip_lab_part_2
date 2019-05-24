@@ -1,9 +1,173 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="136b2f5b-3bc0-4528-84c1-2ac5c92e40c0" name="Default Changelist" comment="">
+    <list default="true" id="e513efb9-8497-49ca-9402-b17a897b817b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/_5_multi_thread" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/_5_multi_thread" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/_5_multi_thread.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/_5_multi_thread.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/_5_one_thread" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/_5_one_thread" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/_5_one_thread.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/_5_one_thread.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/3.14.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/3.14.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/3.14.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/3.14.3/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/3.14.3/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/3.14.3/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/3.14.3/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/3.14.3/CompilerIdCXX/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_multi_thread.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_multi_thread.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_multi_thread.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_multi_thread.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_multi_thread.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_multi_thread.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_multi_thread.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_multi_thread.dir/includes_CXX.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_multi_thread.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_multi_thread.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_multi_thread.dir/objects.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_multi_thread.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_multi_thread.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_multi_thread.dir/sources/archive_functions.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_multi_thread.dir/sources/configuration.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_multi_thread.dir/sources/directory_functions.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_multi_thread.dir/sources/dispatcher.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_multi_thread.dir/sources/multi_thread_solution.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_multi_thread.dir/sources/work_with_text_file.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_one_thread.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_one_thread.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_one_thread.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_one_thread.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_one_thread.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_one_thread.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_one_thread.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_one_thread.dir/includes_CXX.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_one_thread.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_one_thread.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_one_thread.dir/objects.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_one_thread.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_one_thread.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_one_thread.dir/sources/archive_functions.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_one_thread.dir/sources/configuration.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_one_thread.dir/sources/directory_functions.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_one_thread.dir/sources/one_thread_solution.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/_5_one_thread.dir/sources/work_with_text_file.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/_5.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug-mingw/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/CMakeError.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_multi_thread.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_multi_thread.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_multi_thread.dir/sources/archive_functions.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_multi_thread.dir/sources/archive_functions.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_multi_thread.dir/sources/configuration.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_multi_thread.dir/sources/configuration.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_multi_thread.dir/sources/directory_functions.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_multi_thread.dir/sources/directory_functions.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_multi_thread.dir/sources/dispatcher.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_multi_thread.dir/sources/dispatcher.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_multi_thread.dir/sources/multi_thread_solution.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_multi_thread.dir/sources/multi_thread_solution.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_multi_thread.dir/sources/work_with_text_file.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_multi_thread.dir/sources/work_with_text_file.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_one_thread.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_one_thread.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_one_thread.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_one_thread.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_one_thread.dir/sources/archive_functions.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_one_thread.dir/sources/configuration.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_one_thread.dir/sources/directory_functions.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_one_thread.dir/sources/one_thread_solution.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/_5_one_thread.dir/sources/work_with_text_file.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/3.14.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/3.14.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/3.14.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/3.14.3/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/3.14.3/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/3.14.3/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/3.14.3/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/3.14.3/CompilerIdCXX/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_multi_thread.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_multi_thread.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_multi_thread.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_multi_thread.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_multi_thread.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_multi_thread.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_multi_thread.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_multi_thread.dir/includes_CXX.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_multi_thread.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_multi_thread.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_multi_thread.dir/objects.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_multi_thread.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_multi_thread.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_multi_thread.dir/sources/archive_functions.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_multi_thread.dir/sources/configuration.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_multi_thread.dir/sources/directory_functions.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_multi_thread.dir/sources/dispatcher.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_multi_thread.dir/sources/multi_thread_solution.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_multi_thread.dir/sources/work_with_text_file.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_one_thread.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_one_thread.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_one_thread.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_one_thread.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_one_thread.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_one_thread.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_one_thread.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_one_thread.dir/includes_CXX.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_one_thread.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_one_thread.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_one_thread.dir/objects.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_one_thread.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_one_thread.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_one_thread.dir/sources/archive_functions.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_one_thread.dir/sources/configuration.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_one_thread.dir/sources/directory_functions.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_one_thread.dir/sources/one_thread_solution.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/_5_one_thread.dir/sources/work_with_text_file.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/_5.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release-mingw/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/CMakeError.log" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/CMakeError.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/_5_multi_thread.dir/sources/archive_functions.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/_5_multi_thread.dir/sources/archive_functions.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/_5_multi_thread.dir/sources/directory_functions.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/_5_multi_thread.dir/sources/directory_functions.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/_5_multi_thread.dir/sources/dispatcher.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/_5_multi_thread.dir/sources/dispatcher.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/_5_multi_thread.dir/sources/work_with_text_file.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/_5_multi_thread.dir/sources/work_with_text_file.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/_5_one_thread.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/_5_one_thread.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/_5_one_thread.dir/sources/archive_functions.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/_5_one_thread.dir/sources/archive_functions.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/_5_one_thread.dir/sources/directory_functions.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/_5_one_thread.dir/sources/directory_functions.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/_5_one_thread.dir/sources/dispatcher.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/_5_one_thread.dir/sources/one_thread_solution.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/_5_one_thread.dir/sources/one_thread_solution.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/_5_one_thread.dir/sources/some_functions_for_one_thread_solution.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/_5_one_thread.dir/sources/work_with_text_file.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/../cmake-build-release/CMakeFiles/_5_one_thread.dir/sources/work_with_text_file.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../config.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../config.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../result/result_by_name.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../result/result_by_name.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../result/result_by_number.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../result/result_by_number.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/word_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/word_script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sources/directory_functions.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sources/directory_functions.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sources/dispatcher.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sources/dispatcher.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sources/multi_thread_solution.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sources/multi_thread_solution.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sources/one_thread_solution.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sources/one_thread_solution.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sources/some_functions_for_one_thread_solution.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sources/some_functions_for_one_thread_solution.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sources/work_with_text_file.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../sources/work_with_text_file.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,12 +176,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/word_script.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+            <state relative-caret-position="489">
+              <caret line="87" column="58" selection-start-line="87" selection-start-column="58" selection-end-line="87" selection-end-column="58" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -27,10 +191,12 @@
       </file>
     </leaf>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>parse</find>
-    </findStrings>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -87,89 +253,64 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="word_script" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="script" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/word_script.py" />
-      <option name="PARAMETERS" value="1 both ../config.txt" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.word_script" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="136b2f5b-3bc0-4528-84c1-2ac5c92e40c0" name="Default Changelist" comment="" />
-      <created>1558363741539</created>
+      <changelist id="e513efb9-8497-49ca-9402-b17a897b817b" name="Default Changelist" comment="" />
+      <created>1558552754485</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1558363741539</updated>
-      <workItem from="1558363742866" duration="3012000" />
+      <updated>1558552754485</updated>
+      <workItem from="1558552760283" duration="957000" />
+      <workItem from="1558556482911" duration="44000" />
+      <workItem from="1558556675131" duration="64000" />
+      <workItem from="1558556930109" duration="16000" />
+      <workItem from="1558557113853" duration="63000" />
+      <workItem from="1558557212566" duration="10000" />
+      <workItem from="1558557365504" duration="72000" />
+      <workItem from="1558557511408" duration="58000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3012000" />
+    <option name="totallyTimeSpent" value="1284000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27345845" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32956153" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/script$word_script.coverage" NAME="word_script Coverage Results" MODIFIED="1558365901869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/word_script.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        <state relative-caret-position="489">
+          <caret line="87" column="58" selection-start-line="87" selection-start-column="58" selection-end-line="87" selection-end-column="58" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
           </folding>

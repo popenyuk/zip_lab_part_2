@@ -17,17 +17,20 @@ class dispatcher {
     config conf_file;
     std::mutex mtx_for_result;
     std::condition_variable cv;
+    bool notify_or_not = false;
     bool will_new_data_be = true;
     bool will_new_result_be = true;
-    std::vector<std::string> input_data;
+    bool total_end_for_data = false;
+    bool total_end_for_result = false;
     std::queue<std::string> process_data;
     std::condition_variable cv_for_result;
+    std::condition_variable cv_for_push_data;
     std::vector<std::thread> merging_threads;
     std::vector<std::thread> indexing_threads;
     std::queue<unordered_map<std::string, size_t >> result_queue;
 
 public:
-    dispatcher(const config &conf);
+    explicit dispatcher(const config &conf);
 
     size_t get_size();
 

@@ -3,28 +3,55 @@ import sys
 
 
 def parse_result(result):
-    return result.split(": ")[1]
+    time = 0
+    to_return = False
+    try:
+        for i in result.split():
+            if i == "Total:":
+                to_return = True
+            if to_return:
+                try:
+                    time = int(i)
+                except:
+                    pass
+    finally:
+        return str(time)
 
+
+def read_from_file(name_of_file):
+    with open(name_of_file, "r") as file:
+        lines = file.readlines()
+    result = dict()
+    for line in lines:
+        line = line.split()
+        result[line[0]] = int(line[-1])
+    return result
+
+def is_equal(result1, result2):
+    if type(result1) is not dict and type(result2) is not dict:
+        return False
+
+    # якщо їх довжини різні
+    if len(result1) != len(result2):
+        return False
+
+    for keyword in result1:
+        if keyword not in result2 or result1[keyword] != result2[keyword]:
+            return False
+    return True
 
 def check_results(data):
-    with open('../result/result_by_name.txt', 'r') as f:
-        res_name = f.readlines()
-    f.close()
-    with open('../result/result_by_number.txt', 'r') as f:
-        res_number = f.readlines()
-    f.close()
-    return res_name == data[0] and res_number == data[1]
+    res_name = read_from_file("../result_by_name.txt")
+    res_num = read_from_file("../result_by_number.txt")
+    return is_equal(res_name, data[0]) and is_equal(res_num, data[1])
 
 
 def run_one_time(one_thread, input_file):
-    subprocess.Popen([one_thread, input_file], stdout=subprocess.PIPE).communicate()[0].decode('utf-8')
-    with open('../result/result_by_name.txt', 'r') as f:
-        name = f.readlines()
-    f.close()
-    with open('../result/result_by_number.txt', 'r') as f:
-        number = f.readlines()
-    f.close()
-    return [name, number]
+    process = subprocess.Popen([one_thread, input_file], stdout=subprocess.PIPE)
+    process.wait()
+    res_name = read_from_file("../result_by_name.txt")
+    res_num = read_from_file("../result_by_number.txt")
+    return [res_name, res_num]
 
 
 def run_solution(times, config, file):
@@ -41,12 +68,12 @@ def run_solution(times, config, file):
 
         if int(res) < int(min_time):
             min_time = res
-
-    print("Running time: " + min_time)
+    print("Results of", file.split('_')[-2], file.split('_')[-1], ":")
+    print("\tRunning time: " + min_time)
     if results_are_same:
-        print("Results are the same for all the one solutions runs")
+        print("\tResults are the same for all the solutions runs\n")
     else:
-        print("Results are NOT the same for all the one solutions runs")
+        print("\tResults are NOT the same for all one solutions runs\n")
     return data
 
 
@@ -77,9 +104,9 @@ def main():
         second = run_solution(times, config, multi_thread)
 
         if first != second:
-            print("\nResults are NOT the same for one thread and multiple threads solutions!")
+            print("Results are NOT the same for one thread and multiple threads solutions!")
         else:
-            print("\nResults are the same for one thread and multiple threads solutions!")
+            print("Results are the same for one thread and multiple threads solutions!")
 
 
 if __name__ == '__main__':
