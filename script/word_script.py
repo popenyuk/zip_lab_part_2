@@ -46,8 +46,8 @@ def check_results(data):
     return is_equal(res_name, data[0]) and is_equal(res_num, data[1])
 
 
-def run_one_time(one_thread, input_file):
-    process = subprocess.Popen([one_thread, input_file], stdout=subprocess.PIPE)
+def run_one_time(file, input_file):
+    process = subprocess.Popen([file, input_file], stdout=subprocess.PIPE)
     process.wait()
     res_name = read_from_file("../result_by_name.txt")
     res_num = read_from_file("../result_by_number.txt")
@@ -63,8 +63,7 @@ def run_solution(times, config, file):
         process.wait()
         res = parse_result(process.stdout.read().decode('utf-8'))
 
-        if not check_results(data):
-            results_are_same = False
+        results_are_same = check_results(data)
 
         if int(res) < int(min_time):
             min_time = res

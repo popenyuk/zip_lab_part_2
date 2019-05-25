@@ -28,6 +28,13 @@ This program counts the number of each words in input files using its own queue 
     ```
     $ ./_5_multi_thread <configuration_file>
     ```<br>
+	
+## Running script
+	From any directory of project, except directory of project, run
+	python3 ../script/word_script.py number both ../config.txt, where number is number of repetitions
+	
+	
+
   
 
 

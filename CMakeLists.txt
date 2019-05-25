@@ -35,7 +35,7 @@ ADD_EXECUTABLE(_5_one_thread sources/one_thread_solution.cpp
         headers/time_functions.h sources/directory_functions.cpp
         headers/directory_functions.h
         headers/dispatcher.h sources/dispatcher.cpp
-        )
+        sources/directory_function_for_one_thread.cpp headers/directory_function_for_one_thread.h)
 
 ADD_EXECUTABLE(_5_multi_thread sources/multi_thread_solution.cpp
         sources/archive_functions.cpp

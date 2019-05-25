@@ -8,6 +8,7 @@
 #include "archive_functions.h"
 #include "work_with_text_file.h"
 #include "directory_functions.h"
+#include "directory_function_for_one_thread.h"
 
 using std::cout;
 using std::endl;
@@ -47,8 +48,9 @@ int main(int argc, char *argv[]) {
     auto start_time = get_current_time_fenced();
 
 //--------------------------------   Reading file names
-    auto extension = find_extension(conf.in_file);
     vector<string> files;
+    unordered_map<string, size_t> words_map;
+    auto extension = find_extension(conf.in_file);
     transform(extension.begin(), extension.end(), extension.begin(), ::tolower);
     if (extension == "zip") {
         files = extract_in_memory(conf.in_file);
@@ -57,31 +59,30 @@ int main(int argc, char *argv[]) {
         read_file_into_string(conf.in_file, file_in_memory);
         files.push_back(file_in_memory);
     } else if (extension[extension.size() - 1] == '/') {
-        files = read_txt_files_from_directory(conf.in_file);
+        words_map = read_txt_files_from_directory(conf.in_file);
     } else {
         cerr << "Wrong file extension." << endl;
         exit(-2);
     }
-//-------------------------------- Reading file in memory
-    vector<string> words;
-    for (auto &in_file:files) {
-        separate_by_words(in_file, words);
-    }
-
 //--------------------------------   Counting words
-    unordered_map<string, size_t> words_map;
-    count_words(words, words_map);
+    if (extension == "txt" || extension == "zip") {
+        vector<string> words;
+        for (auto &in_file:files) {
+            separate_by_words(in_file, words);
+        }
+        count_words(words, words_map);
+    }
 
 //--------------------------------   Sorting
     auto by_numbers = sort_words(words_map);
     auto by_words = sort_words(words_map, false);
-    auto finish_time = get_current_time_fenced();
 
 //--------------------------------   Writing to the file
     write_to_file(conf.out_by_number, by_numbers);
     write_to_file(conf.out_by_name, by_words);
 
 //--------------------------------
+    auto finish_time = get_current_time_fenced();
     auto time_all_total = finish_time - start_time;
 
     cout << "Total: " << to_us(time_all_total) << endl;

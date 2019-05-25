@@ -7,6 +7,6 @@
 #include <vector>
 #include "dispatcher.h"
 
-std::vector<std::string> read_txt_files_from_directory(const std::string &folder, dispatcher *current = nullptr);
+void read_txt_files_from_directory(const std::string &folder, dispatcher *current);
 
 #endif //_5_DIRECTORY_FUNCTIONS_H
