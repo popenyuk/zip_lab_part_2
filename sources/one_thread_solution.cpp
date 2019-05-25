@@ -8,7 +8,6 @@
 #include "archive_functions.h"
 #include "work_with_text_file.h"
 #include "directory_functions.h"
-#include "some_functions_for_one_thread_solution.h"
 
 using std::cout;
 using std::endl;
@@ -52,22 +51,21 @@ int main(int argc, char *argv[]) {
     vector<string> files;
     transform(extension.begin(), extension.end(), extension.begin(), ::tolower);
     if (extension == "zip") {
-        extract(conf.in_file);
-        files = read_archive_entries_one_thread(conf.in_file);
+        files = extract_in_memory(conf.in_file);
     } else if (extension == "txt") {
-        files.push_back(conf.in_file);
+        string file_in_memory;
+        read_file_into_string(conf.in_file, file_in_memory);
+        files.push_back(file_in_memory);
     } else if (extension[extension.size() - 1] == '/') {
-        files = read_txt_files_from_directory_one_thread(conf.in_file);
+        files = read_txt_files_from_directory(conf.in_file);
     } else {
         cerr << "Wrong file extension." << endl;
         exit(-2);
     }
 //-------------------------------- Reading file in memory
-    string string_file;
     vector<string> words;
     for (auto &in_file:files) {
-        read_file_into_string(in_file, string_file);
-        separate_by_words(string_file, words);
+        separate_by_words(in_file, words);
     }
 
 //--------------------------------   Counting words

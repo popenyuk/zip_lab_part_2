@@ -125,10 +125,11 @@ void search_and_add_files(dispatcher *current) {
     auto extension = find_extension(current->get_input_file());
     transform(extension.begin(), extension.end(), extension.begin(), ::tolower);
     if (extension == "zip") {
-        extract(current->get_input_file());
-        read_archive_entries(current->get_input_file(), current);
+        extract_in_memory(current->get_input_file(), current);
     } else if (extension == "txt") {
-        current->push_data(current->get_input_file());
+        string new_file;
+        read_file_into_string(current->get_input_file(), new_file);
+        current->push_data(new_file);
     } else if (extension[extension.size() - 1] == '/') {
         read_txt_files_from_directory(current->get_input_file(), current);
     } else {

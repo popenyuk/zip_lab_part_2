@@ -4,8 +4,9 @@
 #define _5_DIRECTORY_FUNCTIONS_H
 
 #include <string>
+#include <vector>
 #include "dispatcher.h"
 
-void read_txt_files_from_directory(const std::string &folder, dispatcher *current);
+std::vector<std::string> read_txt_files_from_directory(const std::string &folder, dispatcher *current = nullptr);
 
 #endif //_5_DIRECTORY_FUNCTIONS_H

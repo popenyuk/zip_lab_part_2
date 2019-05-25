@@ -10,43 +10,14 @@ using std::string;
 using std::vector;
 using std::runtime_error;
 
-int copy_data(struct archive *ar, struct archive *aw) {
-    int r;
-    const void *buff;
-    size_t size;
-    la_int64_t offset;
-
-    for (;;) {
-        r = archive_read_data_block(ar, &buff, &size, &offset);
-        if (r == ARCHIVE_EOF)
-            return (ARCHIVE_OK);
-        if (r < ARCHIVE_OK)
-            return (r);
-        r = static_cast<int>(archive_write_data_block(aw, buff, size, offset));
-        if (r < ARCHIVE_OK) {
-            fprintf(stderr, "%s\n", archive_error_string(aw));
-            return (r);
-        }
-    }
-}
-
-void extract(const string &filename) {
+vector<string> extract_in_memory(const string &filename, dispatcher *current) {
+    vector<string> file_in_memory;
     struct archive *a;
-    struct archive *ext;
     struct archive_entry *entry;
-    int flags;
     int r;
-
-    flags = ARCHIVE_EXTRACT_TIME;
-    flags |= ARCHIVE_EXTRACT_PERM;
-    flags |= ARCHIVE_EXTRACT_ACL;
-    flags |= ARCHIVE_EXTRACT_FFLAGS;
-
+    string word;
     a = archive_read_new();
     archive_read_support_format_all(a);
-    ext = archive_write_disk_new();
-    archive_write_disk_set_options(ext, flags);
-    archive_write_disk_set_standard_lookup(ext);
     if (archive_read_open_filename(a, filename.c_str(), 0))
         throw runtime_error("Archive has been corrupted");
     for (;;) {
@@ -58,47 +29,31 @@ void extract(const string &filename) {
         }
         if (r < ARCHIVE_WARN)
             throw runtime_error("Archive has been corrupted");
-        r = archive_write_header(ext, entry);
-        if (r < ARCHIVE_OK) {
-            fprintf(stderr, "%s\n", archive_error_string(ext));
-        } else if (archive_entry_size(entry) > 0) {
-            r = copy_data(a, ext);
+        if (find_extension(archive_entry_pathname(entry)) == "txt") {
+            size_t size = archive_entry_size(entry);
+            char data[size];
+            r = archive_read_data(a, data, size * sizeof(char));
+
+            if (r == ARCHIVE_EOF)
+                break;
             if (r < ARCHIVE_OK) {
-                fprintf(stderr, "%s\n", archive_error_string(ext));
+                fprintf(stderr, "%s\n", archive_error_string(a));
             }
             if (r < ARCHIVE_WARN)
                 throw runtime_error("Archive has been corrupted");
+
+            for(size_t i = 0; i < size; ++i){
+                word.push_back(data[i]);
+            }
+            if (current != nullptr) {
+                current->push_data(word);
+            } else {
+                file_in_memory.push_back(word);
+            }
+            word.clear();
         }
-        r = archive_write_finish_entry(ext);
-        if (r < ARCHIVE_OK) {
-            fprintf(stderr, "%s\n", archive_error_string(ext));
-        }
-        if (r < ARCHIVE_WARN)
-            throw runtime_error("Archive has been corrupted");
     }
     archive_read_close(a);
     archive_read_free(a);
-    archive_write_close(ext);
-    archive_write_free(ext);
-}
-
-void read_archive_entries(const string &path, dispatcher *current) {
-    struct archive *a;
-    struct archive_entry *entry;
-
-    a = archive_read_new();
-    archive_read_support_filter_all(a);
-    archive_read_support_format_all(a);
-    if (archive_read_open_filename(a, path.c_str(), 0) != ARCHIVE_OK)
-        throw runtime_error("Archive has been corrupted");
-    string file;
-    while (archive_read_next_header(a, &entry) == ARCHIVE_OK) {
-        if(find_extension(archive_entry_pathname(entry)) == "txt"){
-            read_file_into_string(archive_entry_pathname(entry), file);
-            current->push_data(file);
-        }
-        archive_read_data_skip(a);
-    }
-    if (archive_read_free(a) != ARCHIVE_OK)
-        throw runtime_error("Archive has been corrupted");
+    return file_in_memory;
 }

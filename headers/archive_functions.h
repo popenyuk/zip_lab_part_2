@@ -7,10 +7,6 @@
 #include <string>
 #include "dispatcher.h"
 
-int copy_data(struct archive *ar, struct archive *aw);
-
-void extract(const std::string &filename);
-
-void read_archive_entries(const std::string &path, dispatcher *current);
+std::vector<std::string> extract_in_memory(const std::string &filename, dispatcher *current = nullptr);
 
 #endif //INC_5_ARCHIVE_FUNCTIONS_H
