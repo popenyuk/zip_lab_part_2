@@ -34,7 +34,9 @@ This program counts the number of each words in input files using its own queue 
 	python3 ../script/word_script.py number both ../config.txt, where number is number of repetitions
 	
 	
-
+#Results
+Multi thread and one thread shows the same results
+Winning 13 %
   
 
 
