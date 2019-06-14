@@ -34,6 +34,7 @@ This program counts the number of each words in input files using its own queue 
 	
 	
 ## Results
+	It is tested on an 8 Gb archive of TXT files.
 	Multi thread and one thread shows the same results
 	Winning 13 %
   
