@@ -1,6 +1,6 @@
 # zip_lab_part_2
 
-## Counting the number of words in a text file. Part two, our thread-safe queue and dispatching
+## Counting the number of words in a text file. Part two. Our thread-safe queue and dispatching
 ## Introduction
 This program counts the number of each words in input files using its own queue and dispatching.
 
