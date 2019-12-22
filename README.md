@@ -37,11 +37,6 @@ Unfortunately, it is implemented as a class of God, that is, all in one class.
 ## Running script
    	From any directory of project, except directory of project, run
 	python3 ../script/word_script.py number both ../config.txt, where number is number of repetitions
-
-## Realization
-	We wrote programs that can read a TXT file, or a directory with TXT files, or an archive of TXT files. Read them in
-	memory and place them in the thread-safe queue, after which count the number of words and record the result into a
-	file. For a version with an archive, it unzips all TXT files into memory.
 	
 ## Results
 	It is tested on an 8 Gb archive of TXT files.
